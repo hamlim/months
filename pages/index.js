@@ -1,24 +1,23 @@
 import React from 'react';
 
+import Aside from '../components/aside';
+import Calendar from '../components/calendar';
+
 export default () => (
-  <div>
-    <h1><mark style={{backgroundColor: 'var(--a)'}}>--a</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--a-muted-one)'}}>--a-muted-one</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--a-muted-two)'}}>--a-muted-two</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--b)'}}>--b</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--b-muted-one)'}}>--b-muted-one</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--b-muted-two)'}}>--b-muted-two</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--c)'}}>--c</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--c-muted-one)'}}>--c-muted-one</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--c-muted-two)'}}>--c-muted-two</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--d)'}}>--d</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--d-muted-one)'}}>--d-muted-one</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--d-muted-two)'}}>--d-muted-two</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--e)'}}>--e</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--e-muted-one)'}}>--e-muted-one</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--e-muted-two)'}}>--e-muted-two</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--black)', color: 'var(--white)'}}>--black</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--white)'}}>--white</mark></h1>
-    <h1><mark style={{backgroundColor: 'var(--gray)'}}>--gray</mark></h1>
-  </div>
+  <main className="main">
+    <Aside />
+    <Calendar />
+    <style jsx>{`
+      .main {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      @media screen and (min-width: 1200px) {
+        .main {
+          grid-template-columns: 300px 1fr;
+        }
+      }
+    `}</style>
+  </main>
 );
